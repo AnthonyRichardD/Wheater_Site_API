@@ -6,11 +6,11 @@ const cidade = document.querySelector(".cidade");
 const icon = document.querySelector(".clima-icon");
 const temperatura = document.querySelector(".temperatura");
 const condicao = document.querySelector(".condicao");
-const apikey = process.env.SECRET_KEY;
+
 
 let pesquisa = "";
 async function cidadeFetch(nome){
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${nome.toLowerCase()}&aqi=no&lang=pt`)
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=7612fd6b61b34b13b9212513231502&q=${nome.toLowerCase()}&aqi=no&lang=pt`)
     if(response.status === 200){
         const cidade = await response.json()
         pesquisa = await cidade
